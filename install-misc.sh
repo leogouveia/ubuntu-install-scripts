@@ -13,4 +13,5 @@ sudp apt install \
 			gpick \
 			xclip \
 			vim \
+			geary \
 			-y
