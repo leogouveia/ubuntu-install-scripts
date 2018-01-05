@@ -6,4 +6,4 @@ echo "------------------------------------------"
 echo "          INSTALANÇÃO GITKRAKEN           "
 
 source ./helpers.sh
-install_deb "https://www.gitkraken.com/download/linux-deb"
+install_deb "https://release.gitkraken.com/linux/gitkraken-amd64.deb"

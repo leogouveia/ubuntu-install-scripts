@@ -14,6 +14,8 @@ echo "       INSTALANÇÃO VSCODE                 "
     	sudo dpkg -i "$TEMP_DEB" &&
 		rm -f "$TEMP_DEB"
 
+	sudo apt install fonts-firacode
+	
 	#Install dependecies if needed
-    sudo apt-get install -f
+    sudo apt-get install -f -y
 # fi

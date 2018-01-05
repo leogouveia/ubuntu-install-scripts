@@ -7,5 +7,5 @@ function install_deb()
 		rm -f "$TEMP_DEB" 
     
     #Install dependecies if needed
-    sudo apt-get install -f
+    sudo apt-get install -f -y
 }

@@ -17,4 +17,6 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 
 chsh -s `which zsh`
 
-ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+
+echo "Please, restart system to installation take effect"

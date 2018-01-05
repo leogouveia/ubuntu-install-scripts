@@ -14,4 +14,6 @@ sudp apt install \
 			xclip \
 			vim \
 			geary \
+			gnome-tweak-tool \
+			curl \
 			-y

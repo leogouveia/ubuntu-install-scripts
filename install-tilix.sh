@@ -7,6 +7,6 @@ echo "       INSTALANÇÃO TILIX                  "
 
 sudo apt update
 
-sudo apt install tilix
+sudo apt install tilix -y
 
 sudo update-alternatives --config x-terminal-emulator
