@@ -20,12 +20,14 @@
 #     with this program; if not, write to the Free Software Foundation, Inc.,
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+
 echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL THEMES/ADAPTA *******"
+echo "******* INSTALL RESET MS MICE *******"
 
-sudo add-apt-repository ppa:tista/adapta -y
-sudo apt update
-sudo apt install adapta-gtk-theme adapta-backgrounds -y
+source ./helpers.sh
+
+install_deb "https://sourceforge.net/projects/resetmsmice/files/latest/download"
+
