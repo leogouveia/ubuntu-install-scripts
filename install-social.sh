@@ -24,10 +24,24 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL TILIX *******"
+echo "******* INSTALL Telegram & Whatsapp Desktop (Unofficial) *******"
+
+
+# Install whatsapp
+# Add the repository to your sources list
+curl -L https://packagecloud.io/Enrico204/Whatsapp-Desktop/gpgkey | sudo apt-key add -
+
+
+sudo sh -c "echo 'deb https://packagecloud.io/Enrico204/Whatsapp-Desktop/debian/ stretch main' > /etc/apt/sources.list.d/Enrico204.list"
+
+sudo apt install -y apt-transport-https curl gnupg
+sudo apt update
+sudo apt install -y whatsapp-desktop
+
+
+# Install telegram
+sudo add-apt-repository ppa:atareao/telegram -y
 
 sudo apt update
 
-sudo apt install tilix -y
-
-sudo update-alternatives --config x-terminal-emulator
+sudo apt install telegram -y

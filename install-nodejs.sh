@@ -24,10 +24,19 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL TILIX *******"
+echo "******* INSTALL NODEJS & YARN *******"
+
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo apt install -y build-essential
+
+echo ""
+echo "** INSTALLING YARN **"
+echo ""
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt update
-
-sudo apt install tilix -y
-
-sudo update-alternatives --config x-terminal-emulator
+sudo apt install yarn

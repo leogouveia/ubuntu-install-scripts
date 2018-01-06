@@ -1,21 +1,43 @@
 #!/bin/bash
 
-echo "SCRIPTS DE AUTOMAÇÃO DE INSTALACAO DE APPS"
-echo "------------------------------------------"
-echo "       INSTALANÇÃO VSCODE                 "
+#     My Ubuntu Personal Package Collection Curation.
+#     It's a collection of scripts to install my favorite apps on Ubuntu enviroment.
+#     It's made expecifically to Ubuntu 17.10 (Artful Aardvark)
 
-# if hash snap 2>/dev/null; then
-#     sudo snap install vscode --classic
-# else 
-    # echo 'Snap is not installed in your system.'
+#     Copyright (C) 2018 Leonardo de Albuquerque Gouveia
 
-    TEMP_DEB="$(mktemp)" &&
-    	curl -o "$TEMP_DEB" -L https://go.microsoft.com/fwlink/?LinkID=760868 &&
-    	sudo dpkg -i "$TEMP_DEB" &&
-		rm -f "$TEMP_DEB"
+#     This program is free software; you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation; either version 2 of the License, or
+#     (at your option) any later version.
 
-	sudo apt install fonts-firacode
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+
+#     You should have received a copy of the GNU General Public License along
+#     with this program; if not, write to the Free Software Foundation, Inc.,
+#     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+echo "APPS INSTALLATION AUTOMATION SCRIPTS"
+echo "------------------------------------"
+echo ""
+echo ""
+echo "******* INSTALL VSCODE *******"
+
+
+source ./helpers.sh
+
+# Install VSCode
+install_deb "https://go.microsoft.com/fwlink/?LinkID=760868"
+
+# Install SQL Operations Studio
+install_deb "https://go.microsoft.com/fwlink/?linkid=865308"
+
+
+sudo apt install fonts-firacode
 	
-	#Install dependecies if needed
-    sudo apt-get install -f -y
-# fi
+# It's possible to install vscode by snap
+# sudo snap install vscode --classic
