@@ -24,19 +24,8 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL MISC APPS *******"
+echo "******* INSTALL PHPSTORM *******"
 
-
-
+sudo add-apt-repository -y ppa:maarten-fonville/android-studio
 sudo apt update
-
-sudp apt install \
-			gpick \
-			xclip \
-			vim \
-			geary \
-			gnome-tweak-tool \
-			curl \
-			git \
-			xclip \
-			-y
+sudo apt install -y android-studio

@@ -25,7 +25,8 @@ echo "------------------------------------"
 echo ""
 echo ""
 echo "******* INSTALL PHP 7.1 *******"
-# sudo apt update
+
+sudo apt update
 
 sudo apt install \
             php7.1 \
@@ -60,3 +61,6 @@ sudo apt install \
             php7.1-mapi \
             php7.1-mbstring \
             -y
+
+# Install PHP Composer
+sudo apt install composer -y

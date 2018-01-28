@@ -24,19 +24,12 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL MISC APPS *******"
+echo "******* INSTALL RUBY *******"
 
-
+# Prepare installation
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt update
-
-sudp apt install \
-			gpick \
-			xclip \
-			vim \
-			geary \
-			gnome-tweak-tool \
-			curl \
-			git \
-			xclip \
-			-y
+sudo apt install -y ruby-full

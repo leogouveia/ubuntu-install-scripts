@@ -48,4 +48,17 @@ sudo add-apt-repository \
 
 sudo apt update
 
-sudo apt install docker-ce docker-compose -y
+# Manage Docker as a non-root user
+
+sudo groupadd docker
+
+sudo usermod -aG docker $USER
+
+# Configure docker to start on book
+
+sudo systemctl enable docker
+
+# sudo systemctl disable docker
+
+
+
