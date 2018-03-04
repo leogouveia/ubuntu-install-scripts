@@ -24,7 +24,7 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL PHPSTORM *******"
+echo "******* INSTALL ANDROID STUDIO *******"
 
 sudo add-apt-repository -y ppa:maarten-fonville/android-studio
 sudo apt update

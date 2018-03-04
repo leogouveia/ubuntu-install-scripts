@@ -30,12 +30,12 @@ echo "******* INSTALL MISC APPS *******"
 
 sudo apt update
 
-sudp apt install \
+			# gnome-tweak-tool \
+sudo apt install \
 			gpick \
 			xclip \
 			vim \
 			geary \
-			gnome-tweak-tool \
 			curl \
 			git \
 			xclip \
