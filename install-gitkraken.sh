@@ -26,5 +26,9 @@ echo ""
 echo ""
 echo "******* INSTALL GITKRAKEN *******"
 
+# Gitkraken dependecies
+sudo apt update
+sudo apt install libgnome-keyring-common libgnome-keyring-dev libcanberra-gtk-module 
+
 source ./helpers.sh
 install_deb "https://release.gitkraken.com/linux/gitkraken-amd64.deb"
