@@ -30,7 +30,7 @@ echo "******* INSTALL MISC APPS *******"
 
 sudo apt update
 
-			# gnome-tweak-tool \
+# gnome-tweak-tool \
 sudo apt install \
 			gpick \
 			xclip \
@@ -38,5 +38,4 @@ sudo apt install \
 			geary \
 			curl \
 			git \
-			xclip \
 			-y

@@ -24,30 +24,9 @@ echo "APPS INSTALLATION AUTOMATION SCRIPTS"
 echo "------------------------------------"
 echo ""
 echo ""
-echo "******* INSTALL GNOME-VANILLA *******"
+echo "******* INSTALL THEMES/ICONS/PAPIRUS *******"
 
-
-# AS SAID IN UBUNTU 17.10 RELEASE NOTES:
-# The Ubuntu GNOME flavor has been discontinued. 
-# If you are using Ubuntu GNOME, you will be upgraded to Ubuntu. 
-# Choose the Ubuntu session from the cog on the login screen 
-# if you would like the default Ubuntu experience.
-
-# Install gnome-session and choose GNOME 
-# from the cog on the login screen if you would like to try a 
-# more upstream version of GNOME.
-# If you'd like to also install more core apps, 
-# install the vanilla-gnome-desktop metapackage. 
-
-sudo apt update
-
-sudo apt install \
-			vanilla-gnome-desktop \
-			# gnome-tweak-tool \
-			# gnome-session \
-			# gnome-shell-extensions \
-			# gnome-tweak-tool \
-			# gnome-menus \
-			-y
-
-# sudo apt install gnome-shell-extension-dashtodock 
+sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu bionic main' > /etc/apt/sources.list.d/papirus-ppa.list"
+sudo apt-key adv -y --recv-keys --keyserver keyserver.ubuntu.com E58A9D36647CAE7F
+sudo apt update -y
+sudo apt install papirus-icon-theme -y
