@@ -30,6 +30,9 @@ echo "******* INSTALL ZSH   *******"
 
 sudo apt install zsh python3 python-is-python3 -y
 
+# Make zsh default shell
+chsh -s $(which zsh)
+
 # TODO: USE DOTFILES!?
 
 cat <<EOF >~/.zshrc
