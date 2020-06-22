@@ -46,7 +46,6 @@ sudo apt install \
 			# gnome-tweak-tool \
 			# gnome-session \
 			# gnome-shell-extensions \
-			# gnome-tweak-tool \
 			# gnome-menus \
 			-y
 
