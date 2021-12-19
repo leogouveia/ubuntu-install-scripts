@@ -35,7 +35,7 @@ chsh -s $(which zsh)
 
 # TODO: USE DOTFILES!?
 
-cat <<EOF >~/.zshrc
+tee ~/.zshrc << EOF
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 ZSH="${HOME}/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
@@ -52,17 +52,13 @@ alias update_antibody_plugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plu
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte-2.91.sh
 fi
-
 EOF
-
-
-zsh 
 
 echo "*** INSTALLING ANTIBODY ***"
 curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
 
 echo "*** CREATING ZSH PLUGINS FILE ***"
-cat <<EOF >~/.zsh_plugins.txt
+tee ~/.zsh_plugins.txt << EOF
 djui/alias-tips
 
 # Oh My zsh
@@ -90,8 +86,10 @@ EOF
 echo "*** STATIC LOADING PLUGINS ***"
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
-echo "*** SOUCING .ZSHRC ***"
-source ~/.zshrc
+# echo "*** SOUCING .ZSHRC ***"
+#source ~/.zshrc
 
-echo "*** INTALL FNM (FAST NODE MANAGER) ***"
-curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+zsh 
+
+#echo "*** INTALL FNM (FAST NODE MANAGER) ***"
+#curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
